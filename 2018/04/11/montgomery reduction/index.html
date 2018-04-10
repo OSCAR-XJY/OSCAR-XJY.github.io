@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&amp;lt;=d&amp;lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值. 原理1：  （a^2）mod c=（（a mod c）* a ）mod c （a^3）mod c=（（（a mod c）* a）mo">
+<meta name="description" content="Introduction:我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&amp;lt;=d&amp;lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值. Theorem 1（a^2）mod c=（（a mod c）* a ）mod c （a^3）mod c=（">
 <meta name="keywords" content="Montgomery reduction">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Montgomery reduction">
 <meta property="og:url" content="http://yoursite.com/2018/04/11/montgomery reduction/index.html">
 <meta property="og:site_name" content="Oscar&#39;s Programming Blog">
-<meta property="og:description" content="我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&amp;lt;=d&amp;lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值. 原理1：  （a^2）mod c=（（a mod c）* a ）mod c （a^3）mod c=（（（a mod c）* a）mo">
+<meta property="og:description" content="Introduction:我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&amp;lt;=d&amp;lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值. Theorem 1（a^2）mod c=（（a mod c）* a ）mod c （a^3）mod c=（">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-04-10T19:08:29.876Z">
+<meta property="og:updated_time" content="2018-04-10T19:16:26.693Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Montgomery reduction">
-<meta name="twitter:description" content="我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&amp;lt;=d&amp;lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值. 原理1：  （a^2）mod c=（（a mod c）* a ）mod c （a^3）mod c=（（（a mod c）* a）mo">
+<meta name="twitter:description" content="Introduction:我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&amp;lt;=d&amp;lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值. Theorem 1（a^2）mod c=（（a mod c）* a ）mod c （a^3）mod c=（">
 
 
 
@@ -345,18 +345,14 @@
       
 
       
-        <p>我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&lt;=d&lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值.</p>
-<p>原理1： </p>
-<pre><code>（a^2）mod c=（（a mod c）* a ）mod c
+        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction:"></a>Introduction:</h1><p>我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&lt;=d&lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值.</p>
+<h1 id="Theorem-1"><a href="#Theorem-1" class="headerlink" title="Theorem 1"></a>Theorem 1</h1><pre><code>（a^2）mod c=（（a mod c）* a ）mod c
 （a^3）mod c=（（（a mod c）* a）mod c ）mod c
  ……
-</code></pre><p>原理2：</p>
-<pre><code>d 由十进制转化为二进制，假设得到（10101010）
-a^d=(a^2^0)*(a^2^2)*(a^2^4)*(a^2^6)
-</code></pre><p>对原理2应用原理1:</p>
-<pre><code>(a^2) mod c=( (a mod c)*(a mod c) ) mod c
-</code></pre><p>结合得到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">long long int ans(long long int a,long long int c,int pointer,int two[]);</span><br><span class="line">void ten_to_two(long long int ten,int two[],int&amp;pointer);</span><br><span class="line">int main()&#123;</span><br><span class="line">        long long int a,d,c;</span><br><span class="line">        int pointer,two[1000]=&#123;&#125;;</span><br><span class="line">        cin&gt;&gt;a&gt;&gt;d&gt;&gt;c;</span><br><span class="line">        ten_to_two(d,two,pointer);</span><br><span class="line">        cout&lt;&lt;ans(a,c,pointer,two)&lt;&lt;endl;</span><br><span class="line">        return 0;</span><br><span class="line">&#125;</span><br><span class="line">long long int ans(long long int a,long long int c,int pointer,int two[])&#123;</span><br><span class="line">        long long int answer=1,base=a%c;</span><br><span class="line">        int flag=pointer-1;</span><br><span class="line">        while(pointer--)&#123;</span><br><span class="line">                if(two[flag-pointer]==1)</span><br><span class="line">                        answer=(base*answer)%c;</span><br><span class="line">                base=(base*base)%c;</span><br><span class="line">        &#125;</span><br><span class="line">        return answer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void ten_to_two(long long int ten,int two[],int&amp;pointer)&#123;</span><br><span class="line">        pointer=0;</span><br><span class="line">        while(ten&gt;0)&#123;</span><br><span class="line">                two[pointer]=ten%2;</span><br><span class="line">                ten/=2;</span><br><span class="line">                pointer++;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+</code></pre><h1 id="Theorem-2"><a href="#Theorem-2" class="headerlink" title="Theorem 2"></a>Theorem 2</h1><pre><code>Assume convert d from decimal to binary get（10101010）
+      a^d=(a^2^0)*(a^2^2)*(a^2^4)*(a^2^6)
+</code></pre><h1 id="Combine-1-amp-2"><a href="#Combine-1-amp-2" class="headerlink" title="Combine 1&amp;2"></a>Combine 1&amp;2</h1><pre><code>(a^2) mod c=( (a mod c)*(a mod c) ) mod c
+</code></pre><h1 id="Practice"><a href="#Practice" class="headerlink" title="Practice"></a>Practice</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">long long int ans(long long int a,long long int c,int pointer,int two[]);</span><br><span class="line">void ten_to_two(long long int ten,int two[],int&amp;pointer);</span><br><span class="line">int main()&#123;</span><br><span class="line">        long long int a,d,c;</span><br><span class="line">        int pointer,two[1000]=&#123;&#125;;</span><br><span class="line">        cin&gt;&gt;a&gt;&gt;d&gt;&gt;c;</span><br><span class="line">        ten_to_two(d,two,pointer);</span><br><span class="line">        cout&lt;&lt;ans(a,c,pointer,two)&lt;&lt;endl;</span><br><span class="line">        return 0;</span><br><span class="line">&#125;</span><br><span class="line">long long int ans(long long int a,long long int c,int pointer,int two[])&#123;</span><br><span class="line">        long long int answer=1,base=a%c;</span><br><span class="line">        int flag=pointer-1;</span><br><span class="line">        while(pointer--)&#123;</span><br><span class="line">                if(two[flag-pointer]==1)</span><br><span class="line">                        answer=(base*answer)%c;</span><br><span class="line">                base=(base*base)%c;</span><br><span class="line">        &#125;</span><br><span class="line">        return answer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void ten_to_two(long long int ten,int two[],int&amp;pointer)&#123;</span><br><span class="line">        pointer=0;</span><br><span class="line">        while(ten&gt;0)&#123;</span><br><span class="line">                two[pointer]=ten%2;</span><br><span class="line">                ten/=2;</span><br><span class="line">                pointer++;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -448,8 +444,17 @@ a^d=(a^2^0)*(a^2^2)*(a^2^4)*(a^2^6)
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -525,6 +530,22 @@ a^d=(a^2^0)*(a^2^2)*(a^2^4)*(a^2^6)
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Theorem-1"><span class="nav-number">2.</span> <span class="nav-text">Theorem 1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Theorem-2"><span class="nav-number">3.</span> <span class="nav-text">Theorem 2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Combine-1-amp-2"><span class="nav-number">4.</span> <span class="nav-text">Combine 1&amp;2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Practice"><span class="nav-number">5.</span> <span class="nav-text">Practice</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
