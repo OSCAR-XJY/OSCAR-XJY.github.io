@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/11/mogomary/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/11/montgomery reduction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xu Jiayun">
@@ -271,7 +271,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/11/mogomary/" itemprop="url">mogomary</a></h2>
+                <a class="post-title-link" href="/2018/04/11/montgomery reduction/" itemprop="url">Montgomery reduction</a></h2>
         
 
         <div class="post-meta">
@@ -283,7 +283,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-11T00:31:42+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-11T02:39:59+08:00">
                 2018-04-11
               </time>
             
@@ -306,8 +306,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/testcarrr/" itemprop="url" rel="index">
-                    <span itemprop="name">testcarrr</span>
+                  <a href="/categories/Algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithm</span>
                   </a>
                 </span>
 
@@ -345,25 +345,21 @@
       
         
           
-          大数的幂取模和素数的相关内容##基本的模运算将a和b除以m后所得的余数相等记作a≡b(mod m)a≡b(mod m), 将a除以m所得的余数记作a mod ma mod m,并规定0≤a mod m≤m−10≤a mod m≤m−1。假设a≡c(mod m)a≡c(mod m)且b≡d(mod m)b≡d(mod m),那么有下面的等式成立：
-a+b≡c+d(mod m)
-a+b≡c+d(mod m)
-a−b≡c−d(mod m)
-a−b≡c−d(mod m)
-a∗b≡c∗d(mod m)
-a∗b≡c∗d(mod m)
-##快速幂运算
-
-反复平方法
-
-我们把对任意的1 &lt; x &lt; n都有xn≡x(mod n)xn≡x(mod n)成立的合数n称为Carmicheal Number。对于给定的整数n，请判断它是不是Carmichael Number.
-此题中，最为关键的就是如何求出xn mod nxn mod n的问题，因为很有可能这个幂会溢出考虑加速幂运算的方法，同时保证不溢出。在n=2kn=2k的条件下，有xn=((x2)2)…
-xn=((x2)2)…
-由此，我们可以将
+          我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&lt;=d&lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值.
+原理1： 
+（a^2）mod c=（（a mod c）* a ）mod c
+（a^3）mod c=（（（a mod c）* a）mod c ）mod c
+ ……
+原理2：
+d 由十进制转化为二进制，假设得到（10101010）
+a^d=(a^2^0)*(a^2^2)*(a^2^4)*(a^2^6)
+对原理2应用原理1:
+(a^2) mod c=( (a mod c)*(a mod c) ) mod c
+结合得到12345678910111213141516171819202122232425262728293031#include&lt;iostream&gt;using namespace std;long long int ans(long long int a,long long int c,int pointer,
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/04/11/mogomary/" rel="contents">
+            <a class="btn" href="/2018/04/11/montgomery reduction/" rel="contents">
               Read more &raquo;
             </a>
           </div>
