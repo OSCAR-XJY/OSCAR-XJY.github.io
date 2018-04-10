@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Oscar&#39;s Programming Blog">
 <meta property="og:description" content="Introduction:我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&amp;lt;=d&amp;lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值. Theorem 1（a^2）mod c=（（a mod c）* a ）mod c （a^3）mod c=（">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-04-10T19:16:26.693Z">
+<meta property="og:updated_time" content="2018-04-10T19:20:08.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Montgomery reduction">
 <meta name="twitter:description" content="Introduction:我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&amp;lt;=d&amp;lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值. Theorem 1（a^2）mod c=（（a mod c）* a ）mod c （a^3）mod c=（">
@@ -347,7 +347,7 @@
       
         <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction:"></a>Introduction:</h1><p>我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&lt;=d&lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值.</p>
 <h1 id="Theorem-1"><a href="#Theorem-1" class="headerlink" title="Theorem 1"></a>Theorem 1</h1><pre><code>（a^2）mod c=（（a mod c）* a ）mod c
-（a^3）mod c=（（（a mod c）* a）mod c ）mod c
+（a^3）mod c=（（ （ （a mod c）* a）mod c ）*a ）mod c
  ……
 </code></pre><h1 id="Theorem-2"><a href="#Theorem-2" class="headerlink" title="Theorem 2"></a>Theorem 2</h1><pre><code>Assume convert d from decimal to binary get（10101010）
       a^d=(a^2^0)*(a^2^2)*(a^2^4)*(a^2^6)
