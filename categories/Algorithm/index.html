@@ -2,8 +2,10 @@
 
 
 
+  
 
-<html class="theme-next muse" lang="en">
+
+<html class="theme-next muse use-motion" lang="en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -152,10 +154,10 @@
     root: '/',
     scheme: 'Muse',
     version: '5.1.4',
-    sidebar: {"display":"post","offset":18,"b2t":false,"scrollpercent":false,"onmobile":true,"scroll_to_more":false,"save_scroll":true,"excerpt_description":false},
+    sidebar: {"display":"always","offset":18,"b2t":false,"scrollpercent":false,"onmobile":true,"scroll_to_more":false,"save_scroll":true,"excerpt_description":false},
     fancybox: true,
     tabs: true,
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"perspectiveRightIn"}},
     duoshuo: {
       userId: 'undefined',
       author: 'Author'
@@ -511,9 +513,6 @@
 
 
 
-  
-  
-
 
 
 
@@ -548,16 +547,6 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
   
 
 
