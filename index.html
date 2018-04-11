@@ -389,14 +389,14 @@
       
         
           
-          Introduction:我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&lt;=d&lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值.
+          Introduction:dang我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&lt;=d&lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值.
 Theorem 1（a^2）mod c=（（a mod c）* a ）mod c
 （a^3）mod c=（（ （ （a mod c）* a）mod c ）*a ）mod c
  ……
 Theorem 2Assume convert d from decimal to binary get（10101010）
       a^d=(a^2^0)*(a^2^2)*(a^2^4)*(a^2^6)
 Combine 1&amp;2(a^2) mod c=( (a mod c)*(a mod c) ) mod c
-Practice1234567891011121314151617181920212223242526272829303132333435#include&lt;iostream&gt;using n
+Practice1234567891011121314151617181920212223242526272829303132333435#include&lt;iostream&gt;usi
           ...
           <!--noindex-->
           <div class="post-button text-center">
