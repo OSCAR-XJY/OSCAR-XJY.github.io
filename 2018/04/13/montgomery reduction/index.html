@@ -7,7 +7,7 @@
 
 <html class="theme-next muse use-motion" lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
@@ -127,7 +127,7 @@
 
 
 
-  <meta name="keywords" content="Montgomery reduction,test1,test2,test3," />
+  <meta name="keywords" content="Modular Exponentiation," />
 
 
 
@@ -138,18 +138,18 @@
 
 
 
-<meta name="description" content="Introduction:dang我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&amp;lt;=d&amp;lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值. Theorem 1（a^2）mod c=（（a mod c）* a ）mod c （a^3）mod">
-<meta name="keywords" content="Montgomery reduction,test1,test2,test3">
+<meta name="description" content="DescriptionModular exponentiation is widely used, especially in the field of public-key cryptography.  A time-saving method to solve the modular exponentiation problem makes great contributions to the">
+<meta name="keywords" content="Modular Exponentiation">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Montgomery reduction">
-<meta property="og:url" content="http://yoursite.com/2018/04/11/montgomery reduction/index.html">
+<meta property="og:title" content="Modular Exponentiation">
+<meta property="og:url" content="http://yoursite.com/2018/04/13/montgomery reduction/index.html">
 <meta property="og:site_name" content="Oscar&#39;s Programming Blog">
-<meta property="og:description" content="Introduction:dang我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&amp;lt;=d&amp;lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值. Theorem 1（a^2）mod c=（（a mod c）* a ）mod c （a^3）mod">
+<meta property="og:description" content="DescriptionModular exponentiation is widely used, especially in the field of public-key cryptography.  A time-saving method to solve the modular exponentiation problem makes great contributions to the">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-04-12T08:41:12.691Z">
+<meta property="og:updated_time" content="2018-04-12T22:10:43.230Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Montgomery reduction">
-<meta name="twitter:description" content="Introduction:dang我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&amp;lt;=d&amp;lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值. Theorem 1（a^2）mod c=（（a mod c）* a ）mod c （a^3）mod">
+<meta name="twitter:title" content="Modular Exponentiation">
+<meta name="twitter:description" content="DescriptionModular exponentiation is widely used, especially in the field of public-key cryptography.  A time-saving method to solve the modular exponentiation problem makes great contributions to the">
 
 
 
@@ -179,13 +179,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/11/montgomery reduction/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/13/montgomery reduction/"/>
 
 
 
 
 
-  <title>Montgomery reduction | Oscar's Programming Blog</title>
+  <title>Modular Exponentiation | Oscar's Programming Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -202,7 +202,7 @@
   
   
 
-  <div class="container  page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container  page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -300,7 +300,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/11/montgomery reduction/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/13/montgomery reduction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xu Jiayun">
@@ -317,7 +317,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Montgomery reduction</h2>
+          <h2 class="post-title" itemprop="name headline">Modular Exponentiation</h2>
         
 
         <div class="post-meta">
@@ -329,8 +329,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-11T02:39:59+08:00">
-                2018-04-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-13T02:39:59+08:00">
+                2018-04-13
               </time>
             
 
@@ -389,14 +389,19 @@
       
 
       
-        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction:"></a>Introduction:</h1><p>dang我们计算一个大数的模时，特别是当大数由高次幂产生，大数大到甚至无法储存时，可以使用 Montgomery Reduction. 假设 a 为底数，d 为指数（0&lt;=d&lt;=1000000000），c 为模时，利用此算法可快速得到 （a^d）mod c的值.</p>
-<h1 id="Theorem-1"><a href="#Theorem-1" class="headerlink" title="Theorem 1"></a>Theorem 1</h1><pre><code>（a^2）mod c=（（a mod c）* a ）mod c
-（a^3）mod c=（（ （ （a mod c）* a）mod c ）*a ）mod c
- ……
-</code></pre><h1 id="Theorem-2"><a href="#Theorem-2" class="headerlink" title="Theorem 2"></a>Theorem 2</h1><pre><code>Assume convert d from decimal to binary get（10101010）
-      a^d=(a^2^0)*(a^2^2)*(a^2^4)*(a^2^6)
-</code></pre><h1 id="Combine-1-amp-2"><a href="#Combine-1-amp-2" class="headerlink" title="Combine 1&amp;2"></a>Combine 1&amp;2</h1><pre><code>(a^2) mod c=( (a mod c)*(a mod c) ) mod c
-</code></pre><h1 id="Practice"><a href="#Practice" class="headerlink" title="Practice"></a>Practice</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Montgomery reduction</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> <span class="title">ans</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> a,<span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> c,<span class="keyword">int</span> pointer,<span class="keyword">int</span> two[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ten_to_two</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ten,<span class="keyword">int</span> two[],<span class="keyword">int</span>&amp;pointer)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> a,d,c;</span><br><span class="line">        <span class="keyword">int</span> pointer,two[<span class="number">1000</span>]=&#123;&#125;;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"Please enter numbers:"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;d&gt;&gt;c;</span><br><span class="line">        ten_to_two(d,two,pointer);</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;ans(a,c,pointer,two)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> <span class="title">ans</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> a,<span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> c,<span class="keyword">int</span> pointer,<span class="keyword">int</span> two[])</span></span>&#123;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> answer=<span class="number">1</span>,base=a%c;</span><br><span class="line">        <span class="keyword">int</span> flag=pointer<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span>(pointer--)&#123;</span><br><span class="line">                <span class="keyword">if</span>(two[flag-pointer]==<span class="number">1</span>)</span><br><span class="line">                        answer=(base*answer)%c;</span><br><span class="line">                base=(base*base)%c;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> answer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ten_to_two</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ten,<span class="keyword">int</span> two[],<span class="keyword">int</span>&amp;pointer)</span></span>&#123;</span><br><span class="line">        pointer=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(ten&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                two[pointer]=ten%<span class="number">2</span>;</span><br><span class="line">                ten/=<span class="number">2</span>;</span><br><span class="line">                pointer++;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>Modular exponentiation is widely used, especially in the field of public-key cryptography.  A time-saving method to solve the modular exponentiation problem makes great contributions to the processes of both encryption and decryption. <a id="more"></a></p>
+<h1 id="Straightforward-Method"><a href="#Straightforward-Method" class="headerlink" title="Straightforward Method"></a>Straightforward Method</h1><p>Let’ s try to calculate: </p>
+<p>$${17^{3}}\bmod 5$$ </p>
+<p>For simplicity, assume $b = 17$, $e = 20$, $m=5$, and use $b$ (the base), $e$ (the exponent), $m$ (the modulus) below. Firstly:</p>
+<p>$${17^3} = 4913$$</p>
+<p>then: </p>
+<p>$$4913\bmod 5=3$$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt; </span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> b,e,m,p=<span class="number">1</span>;      <span class="comment">//p stores power of b</span></span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;b&gt;&gt;e&gt;&gt;m;</span><br><span class="line">        <span class="keyword">while</span>(e--)&#123;</span><br><span class="line">                p*=b;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;p%m;      <span class="comment">//p mod m</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The time complexity of this method is ${\rm O}\left( e \right)$, which means it’s not practical to apply this way in strong cryptography. Actually, in strong cryptology, $b$ is at least 78 decimal digits (256 bits), and $e$ can be even a larger number.  Since ${b^e}$may contain thousands digits, ${b^e}$cannot be stored in a integer variable even if we use $long$ $long$ $int$. Meanwhile, we may spend a life time, waiting for the final answer.</p>
+<h1 id="Memory-efficient-Method"><a href="#Memory-efficient-Method" class="headerlink" title="Memory-efficient Method"></a>Memory-efficient Method</h1><p>Given two integers $a$ and $b$, the following two equations are equivalent:<br>$$<br>\begin{equation}<br>\begin{split}<br>&amp;c\bmod m = \left( {a \cdot b} \right)\bmod m\\<br>&amp;c\bmod m = \left[ {\left( {a\bmod m} \right) \cdot \left( {b\bmod m} \right)} \right]\bmod m\\<br>\end{split}<br>\nonumber<br>\end{equation}<br>$$<br>we can apply this in ${b^e}\bmod m$:<br>$$<br>\begin{equation}<br>\begin{split}<br>&amp;{b^1}\bmod m = b\bmod m\\<br>&amp;{b^2}\,\bmod \,m = \left[ {\left( {b\,\bmod \,m} \right) \cdot \left( {b\,\bmod \,m} \right)} \right]\,\bmod \,m\\<br>&amp;{b^3}\,\bmod \,m = \left\{ {\left( {b\,\bmod \,m} \right) \cdot \left[ {\,{b^2}\bmod \,m} \right]} \right\}\,\bmod \,m\\<br>&amp;\cdots\\<br>\end{split}<br>\nonumber<br>\end{equation}<br>$$<br>So:<br>$$<br>\begin{equation}<br>\begin{split}<br>&amp;{17^1}\bmod 5 = 2\\<br>&amp;{17^2}\,\bmod 5 = \,\left[ {\left( {17\,\bmod \,5} \right) \cdot \left( {17\,\bmod \,5} \right)} \right]\,\bmod \,5 = \left( {2 \cdot 2} \right)\bmod 5 = 4\\<br>&amp;{17^3}\,\bmod 5 = \,\left\{ {\left( {17\,\bmod \,5} \right) \cdot \left[ {17^2\,\bmod \,5} \right]} \right\}\,\bmod \,5 = \left( {2 \cdot 4} \right)\bmod 5 = 3\\<br>\end{split}<br>\nonumber<br>\end{equation}<br>$$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> b,e,m;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;b&gt;&gt;e&gt;&gt;m;</span><br><span class="line">        <span class="keyword">int</span> f=b%m;      <span class="comment">//f stores ( power of b ) mod m</span></span><br><span class="line">        <span class="keyword">while</span>(--e)&#123;</span><br><span class="line">                f=( (b%m)*f )%m;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;f;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The time complexity of this method is also ${\rm O}\left( e \right)$. But with the same input, integers manipulated here are much smaller than those in straightforward algorithm. So the time spent on computation will reduce, and the memory occupation will significantly decline.  As a result, much larger $b$ and $e$ can be accepted by using this method. However, this method still not rapid enough, especially when we introduce our new test case:$b=13$, $e=1000000000$, $m=1000000007$.</p>
+
       
     </div>
     
@@ -413,13 +418,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Montgomery-reduction/" rel="tag"><i class="fa fa-tag"></i> Montgomery reduction</a>
-          
-            <a href="/tags/test1/" rel="tag"><i class="fa fa-tag"></i> test1</a>
-          
-            <a href="/tags/test2/" rel="tag"><i class="fa fa-tag"></i> test2</a>
-          
-            <a href="/tags/test3/" rel="tag"><i class="fa fa-tag"></i> test3</a>
+            <a href="/tags/Modular-Exponentiation/" rel="tag"><i class="fa fa-tag"></i> Modular Exponentiation</a>
           
         </div>
       
@@ -542,7 +541,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -594,7 +593,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Theorem-1"><span class="nav-number">2.</span> <span class="nav-text">Theorem 1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Theorem-2"><span class="nav-number">3.</span> <span class="nav-text">Theorem 2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Combine-1-amp-2"><span class="nav-number">4.</span> <span class="nav-text">Combine 1&amp;2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Practice"><span class="nav-number">5.</span> <span class="nav-text">Practice</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Straightforward-Method"><span class="nav-number">2.</span> <span class="nav-text">Straightforward Method</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Memory-efficient-Method"><span class="nav-number">3.</span> <span class="nav-text">Memory-efficient Method</span></a></li></ol></div>
             
 
           </div>
@@ -795,6 +794,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
