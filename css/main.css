@@ -444,7 +444,7 @@ body {
 }
 .header-inner {
   margin: 0 auto;
-  padding: 0px 0px 0px;
+  padding: 100px 0px 0px;
   width: 800px;
 }
 @media (min-width: 1600px) {
@@ -1104,7 +1104,7 @@ pre .javascript .function {
   background: #222;
 }
 .site-meta {
-  margin: 0;
+  margin: 20;
   text-align: center;
 }
 @media (max-width: 767px) {
@@ -1818,7 +1818,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #83b3ff;
+  background: #ff9178;
 }
 .links-of-blogroll {
   font-size: 13px;
