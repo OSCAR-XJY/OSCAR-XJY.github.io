@@ -142,11 +142,11 @@
 <meta name="keywords" content="Modular Exponentiation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Modular Exponentiation">
-<meta property="og:url" content="http://yoursite.com/2018/04/13/montgomery reduction/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/04/13/Modular Exponentiation/index.html">
 <meta property="og:site_name" content="Oscar&#39;s Programming Blog">
 <meta property="og:description" content="DescriptionModular exponentiation is widely used, especially in the field of public-key cryptography.  A time-saving method to solve the modular exponentiation problem makes great contributions to the">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-04-12T22:10:43.230Z">
+<meta property="og:updated_time" content="2018-04-12T22:12:04.834Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Modular Exponentiation">
 <meta name="twitter:description" content="DescriptionModular exponentiation is widely used, especially in the field of public-key cryptography.  A time-saving method to solve the modular exponentiation problem makes great contributions to the">
@@ -179,7 +179,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/13/montgomery reduction/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/13/Modular Exponentiation/"/>
 
 
 
@@ -300,7 +300,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/13/montgomery reduction/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/13/Modular Exponentiation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xu Jiayun">
@@ -400,7 +400,7 @@
 <p>The time complexity of this method is ${\rm O}\left( e \right)$, which means it’s not practical to apply this way in strong cryptography. Actually, in strong cryptology, $b$ is at least 78 decimal digits (256 bits), and $e$ can be even a larger number.  Since ${b^e}$may contain thousands digits, ${b^e}$cannot be stored in a integer variable even if we use $long$ $long$ $int$. Meanwhile, we may spend a life time, waiting for the final answer.</p>
 <h1 id="Memory-efficient-Method"><a href="#Memory-efficient-Method" class="headerlink" title="Memory-efficient Method"></a>Memory-efficient Method</h1><p>Given two integers $a$ and $b$, the following two equations are equivalent:<br>$$<br>\begin{equation}<br>\begin{split}<br>&amp;c\bmod m = \left( {a \cdot b} \right)\bmod m\\<br>&amp;c\bmod m = \left[ {\left( {a\bmod m} \right) \cdot \left( {b\bmod m} \right)} \right]\bmod m\\<br>\end{split}<br>\nonumber<br>\end{equation}<br>$$<br>we can apply this in ${b^e}\bmod m$:<br>$$<br>\begin{equation}<br>\begin{split}<br>&amp;{b^1}\bmod m = b\bmod m\\<br>&amp;{b^2}\,\bmod \,m = \left[ {\left( {b\,\bmod \,m} \right) \cdot \left( {b\,\bmod \,m} \right)} \right]\,\bmod \,m\\<br>&amp;{b^3}\,\bmod \,m = \left\{ {\left( {b\,\bmod \,m} \right) \cdot \left[ {\,{b^2}\bmod \,m} \right]} \right\}\,\bmod \,m\\<br>&amp;\cdots\\<br>\end{split}<br>\nonumber<br>\end{equation}<br>$$<br>So:<br>$$<br>\begin{equation}<br>\begin{split}<br>&amp;{17^1}\bmod 5 = 2\\<br>&amp;{17^2}\,\bmod 5 = \,\left[ {\left( {17\,\bmod \,5} \right) \cdot \left( {17\,\bmod \,5} \right)} \right]\,\bmod \,5 = \left( {2 \cdot 2} \right)\bmod 5 = 4\\<br>&amp;{17^3}\,\bmod 5 = \,\left\{ {\left( {17\,\bmod \,5} \right) \cdot \left[ {17^2\,\bmod \,5} \right]} \right\}\,\bmod \,5 = \left( {2 \cdot 4} \right)\bmod 5 = 3\\<br>\end{split}<br>\nonumber<br>\end{equation}<br>$$</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> b,e,m;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;b&gt;&gt;e&gt;&gt;m;</span><br><span class="line">        <span class="keyword">int</span> f=b%m;      <span class="comment">//f stores ( power of b ) mod m</span></span><br><span class="line">        <span class="keyword">while</span>(--e)&#123;</span><br><span class="line">                f=( (b%m)*f )%m;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;f;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>The time complexity of this method is also ${\rm O}\left( e \right)$. But with the same input, integers manipulated here are much smaller than those in straightforward algorithm. So the time spent on computation will reduce, and the memory occupation will significantly decline.  As a result, much larger $b$ and $e$ can be accepted by using this method. However, this method still not rapid enough, especially when we introduce our new test case:$b=13$, $e=1000000000$, $m=1000000007$.</p>
+<p>The time complexity of this method is also ${\rm O}\left( e \right)$. But with the same input, integers manipulated here are much smaller than those in straightforward algorithm. So the time spent on computation will reduce, and the memory occupation will significantly decline.  As a result, much larger $b$ and $e$ can be accepted by using this method. However, this method still not rapid enough, especially when we introduce our new test case: $b=13$, $e=1000000000$, $m=1000000007$.</p>
 
       
     </div>
