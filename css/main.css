@@ -188,7 +188,7 @@ body {
   font-family: 'Georgia', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  color: #555;
+  color: $000;
   background: #fff;
 }
 @media (max-width: 767px) {
@@ -277,15 +277,15 @@ p {
   margin: 0 0 20px 0;
 }
 a {
-  color: #555;
+  color: #333;
   text-decoration: none;
   outline: none;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #888;
   word-wrap: break-word;
 }
 a:hover {
-  color: #222;
-  border-bottom-color: #222;
+  color: #000;
+  border-bottom-color: #000;
 }
 blockquote {
   margin: 0;
@@ -301,13 +301,13 @@ hr {
   margin: 40px 0;
   height: 3px;
   border: none;
-  background-color: #ddd;
+  background-color: #ccc;
   background-image: repeating-linear-gradient(-45deg, #fff, #fff 4px, transparent 4px, transparent 8px);
 }
 blockquote {
   padding: 0 15px;
-  color: #666;
-  border-left: 4px solid #ddd;
+  color: #555;
+  border-left: 4px solid #ccc;
 }
 blockquote cite::before {
   content: "-";
@@ -321,7 +321,7 @@ dd {
   padding: 0;
 }
 kbd {
-  border: 1px solid #ccc;
+  border: 1px solid #bbb;
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1);
   background-color: #f9f9f9;
@@ -386,7 +386,7 @@ kbd {
 .translation {
   margin-top: -20px;
   font-size: 14px;
-  color: #999;
+  color: #888;
 }
 .scrollbar-measure {
   width: 100px;
@@ -403,7 +403,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   font-size: 14px;
   table-layout: fixed;
   word-wrap: break-all;
@@ -424,7 +424,7 @@ td {
 }
 th,
 td {
-  border-bottom: 3px solid #ddd;
+  border-bottom: 3px solid #ccc;
   border-right: 1px solid #eee;
 }
 th {
@@ -488,7 +488,7 @@ pre,
   padding: 0;
   font-size: 15px;
   color: #fcfcfc;
-  background: #222;
+  background: #000;
   line-height: 1.6;
 }
 pre,
@@ -498,8 +498,8 @@ code {
 code {
   padding: 2px 4px;
   word-wrap: break-word;
-  color: #555;
-  background: #eee;
+  color: #333;
+  background: transparent;
   border-radius: 3px;
   font-size: 15px;
 }
@@ -561,7 +561,7 @@ pre code {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #222;
+  background-color: #000;
 }
 .highlight .line {
   height: 20px;
@@ -585,7 +585,7 @@ pre .addition {
   background: #dfd;
 }
 pre .meta {
-  color: #fc9b9b;
+  color: #b5c5ff;
 }
 pre .comment {
   color: #999;
@@ -640,11 +640,11 @@ pre .ruby .title .keyword,
 pre .perl .sub,
 pre .javascript .title,
 pre .coffeescript .title {
-  color: #4271ae;
+  color: #b5c5ff;
 }
 pre .keyword,
 pre .javascript .function {
-  color: #fc9b9b;
+  color: #b5c5ff;
 }
 .full-image.full-image.full-image.full-image {
   border: none;
@@ -689,14 +689,14 @@ pre .javascript .function {
 .page-post-detail .post-type-quote blockquote::before {
   top: -20px;
   background-image: url("../images/quote-l.svg");
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #bbb;
 }
 .blockquote-center::after,
 .page-home .post-type-quote blockquote::after,
 .page-post-detail .post-type-quote blockquote::after {
   bottom: -20px;
   background-image: url("../images/quote-r.svg");
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
   background-position: 100% 8px;
 }
 .blockquote-center p,
@@ -909,27 +909,27 @@ pre .javascript .function {
 }
 .post-body .tabs ul.nav-tabs li.tab.active {
   border-top: 3px solid #fc6423;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
   background-color: #fff;
 }
 @media (max-width: 413px) {
   .post-body .tabs ul.nav-tabs li.tab.active {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ccc;
     border-left: 3px solid #fc6423;
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
   }
 }
 .post-body .tabs ul.nav-tabs li.tab.active a {
   cursor: default;
-  color: #555;
+  color: #333;
 }
 .post-body .tabs .tab-content {
   background-color: #fff;
 }
 .post-body .tabs .tab-content .tab-pane {
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   padding: 20px 20px 0 20px;
 }
 .post-body .tabs .tab-content .tab-pane:not(.active) {
@@ -943,8 +943,8 @@ pre .javascript .function {
   padding: 0 20px;
   font-size: 14px;
   color: #fff;
-  background: #222;
-  border: 2px solid #222;
+  background: #000;
+  border: 2px solid #000;
   text-decoration: none;
   border-radius: 0;
   transition-property: background-color;
@@ -954,8 +954,8 @@ pre .javascript .function {
   line-height: 2;
 }
 .btn:hover {
-  border-color: #222;
-  color: #222;
+  border-color: #000;
+  color: #000;
   background: #fff;
 }
 .btn +.btn {
@@ -969,7 +969,7 @@ pre .javascript .function {
   display: block;
   width: 22px;
   height: 2px;
-  background: #555;
+  background: $000;
   border-radius: 1px;
 }
 .btn-bar+.btn-bar {
@@ -1013,7 +1013,7 @@ pre .javascript .function {
 .pagination .prev:hover,
 .pagination .next:hover,
 .pagination .page-number:hover {
-  border-top-color: #222;
+  border-top-color: #000;
 }
 .pagination .space {
   padding: 0;
@@ -1027,8 +1027,8 @@ pre .javascript .function {
 }
 .pagination .page-number.current {
   color: #fff;
-  background: #ccc;
-  border-top-color: #ccc;
+  background: #bbb;
+  border-top-color: #bbb;
 }
 @media (max-width: 767px) {
   .pagination {
@@ -1045,7 +1045,7 @@ pre .javascript .function {
   .pagination .prev:hover,
   .pagination .next:hover,
   .pagination .page-number:hover {
-    border-bottom-color: #222;
+    border-bottom-color: #000;
   }
 }
 .comments {
@@ -1066,7 +1066,7 @@ pre .javascript .function {
   z-index: 1050;
   padding: 0 6px;
   width: 24px;
-  background: #222;
+  background: #000;
   font-size: 12px;
   opacity: 1;
   color: #fff;
@@ -1101,7 +1101,7 @@ pre .javascript .function {
 }
 .headband {
   height: 3px;
-  background: #222;
+  background: #000;
 }
 .site-meta {
   margin: 20;
@@ -1117,7 +1117,7 @@ pre .javascript .function {
   display: inline-block;
   padding: 0 10px;
   color: #fff;
-  background: #222;
+  background: #000;
   border-bottom: none;
 }
 .brand:hover {
@@ -1140,7 +1140,7 @@ pre .javascript .function {
 .site-subtitle {
   margin-top: 0;
   font-size: 1px;
-  color: #999;
+  color: #888;
 }
 .use-motion .brand {
   opacity: 0;
@@ -1175,7 +1175,7 @@ pre .javascript .function {
     margin: 0 -10px;
     padding: 0 10px;
     clear: both;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ccc;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1214,7 +1214,7 @@ pre .javascript .function {
   transition-delay: 0s;
 }
 .menu .menu-item a:hover {
-  border-bottom-color: #222;
+  border-bottom-color: #000;
 }
 .menu .menu-item .fa {
   margin-right: 5px;
@@ -1242,7 +1242,7 @@ pre .javascript .function {
   margin: -20px auto 15px;
   text-align: center;
   font-size: 16px;
-  color: #999;
+  color: #888;
   font-weight: bold;
   line-height: 1;
 }
@@ -1308,7 +1308,7 @@ pre .javascript .function {
 .posts-expand .post-body h6 .header-anchor {
   float: right;
   margin-left: 10px;
-  color: #ccc;
+  color: #bbb;
   border-bottom-style: none;
   visibility: hidden;
 }
@@ -1333,7 +1333,7 @@ pre .javascript .function {
   box-sizing: border-box;
   margin: auto;
   padding: 3px;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
 }
 .posts-expand .post-body .fancybox img {
   margin: 0 auto 25px;
@@ -1379,7 +1379,7 @@ pre .javascript .function {
   margin-left: 20px;
 }
 .posts-collapse .collection-title small {
-  color: #bbb;
+  color: #aaa;
   margin-left: 5px;
 }
 .posts-collapse .collection-title::before {
@@ -1391,7 +1391,7 @@ pre .javascript .function {
   margin-top: -4px;
   width: 8px;
   height: 8px;
-  background: #bbb;
+  background: #aaa;
   border-radius: 50%;
 }
 .posts-collapse .post {
@@ -1403,7 +1403,7 @@ pre .javascript .function {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   transition-property: border;
-  border-bottom: 1px dashed #ccc;
+  border-bottom: 1px dashed #bbb;
 }
 .posts-collapse .post-header::before {
   content: " ";
@@ -1413,7 +1413,7 @@ pre .javascript .function {
   width: 6px;
   height: 6px;
   margin-left: -4px;
-  background: #bbb;
+  background: #aaa;
   border-radius: 50%;
   border: 1px solid #fff;
   transition-duration: 0.2s;
@@ -1422,10 +1422,10 @@ pre .javascript .function {
   transition-property: background;
 }
 .posts-collapse .post-header:hover {
-  border-bottom-color: #666;
+  border-bottom-color: #555;
 }
 .posts-collapse .post-header:hover::before {
-  background: #222;
+  background: #000;
 }
 .posts-collapse .post-meta {
   position: absolute;
@@ -1447,7 +1447,7 @@ pre .javascript .function {
   opacity: 0.6;
 }
 .posts-collapse .post-title a {
-  color: #666;
+  color: #555;
   border-bottom: none;
 }
 .page-home .post-type-quote .post-header,
@@ -1464,7 +1464,7 @@ pre .javascript .function {
 .posts-expand .post-title-link {
   display: inline-block;
   position: relative;
-  color: #555;
+  color: #333;
   border-bottom: none;
   line-height: 1.2;
   vertical-align: top;
@@ -1500,7 +1500,7 @@ pre .javascript .function {
 }
 .posts-expand .post-meta {
   margin: 3px 0 40px 0;
-  color: #999;
+  color: #888;
   font-family: 'Georgia', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 14px;
   text-align: center;
@@ -1511,7 +1511,7 @@ pre .javascript .function {
   padding: 3px;
 }
 .posts-expand .post-meta .post-category-list-link {
-  color: #999;
+  color: #888;
 }
 .posts-expand .post-meta .post-description {
   font-size: 14px;
@@ -1581,11 +1581,11 @@ pre .javascript .function {
   display: block;
   line-height: 25px;
   font-size: 16px;
-  color: #555;
+  color: #333;
   border-bottom: none;
 }
 .post-nav-item a:hover {
-  color: #222;
+  color: #000;
   border-bottom: none;
 }
 .post-nav-item a:active {
@@ -1615,7 +1615,7 @@ pre .javascript .function {
   margin: 80px auto 60px;
   width: 10%;
   height: 1px;
-  background: #ccc;
+  background: #bbb;
   text-align: center;
 }
 .post:last-child .post-eof.post-eof.post-eof {
@@ -1670,12 +1670,12 @@ pre .javascript .function {
   width: 0;
   z-index: 1040;
   box-shadow: inset 0 2px 6px #000;
-  background: #222;
+  background: #000;
   -webkit-transform: translateZ(0);
 }
 .sidebar a {
-  color: #999;
-  border-bottom-color: #555;
+  color: #888;
+  border-bottom-color: #333;
 }
 .sidebar a:hover {
   color: #eee;
@@ -1683,7 +1683,7 @@ pre .javascript .function {
 .sidebar-inner {
   position: relative;
   padding: 20px 10px;
-  color: #999;
+  color: #888;
   text-align: center;
 }
 .site-overview-wrap {
@@ -1700,7 +1700,7 @@ pre .javascript .function {
   width: 14px;
   height: 14px;
   padding: 5px;
-  background: #222;
+  background: #000;
   line-height: 0;
   z-index: 1050;
   cursor: pointer;
@@ -1736,7 +1736,7 @@ pre .javascript .function {
   padding: 2px;
   max-width: 96px;
   height: auto;
-  border: 2px solid #333;
+  border: 2px solid #111;
 }
 .site-author-name {
   margin: 0px 0 0;
@@ -1748,7 +1748,7 @@ pre .javascript .function {
   margin-top: 5px;
   text-align: center;
   font-size: 14px;
-  color: #999;
+  color: #888;
 }
 .site-state {
   overflow: hidden;
@@ -1759,7 +1759,7 @@ pre .javascript .function {
 .site-state-item {
   display: inline-block;
   padding: 0 15px;
-  border-left: 1px solid #333;
+  border-left: 1px solid #111;
 }
 .site-state-item:first-child {
   border-left: none;
@@ -1807,7 +1807,7 @@ pre .javascript .function {
   vertical-align: middle;
   margin-right: 10px;
   margin-bottom: 10px;
-  border-bottom-color: #555;
+  border-bottom-color: #333;
   font-size: 13px;
 }
 .links-of-author a:before {
@@ -1818,7 +1818,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fffe1b;
+  background: #c4ffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1853,7 +1853,7 @@ pre .javascript .function {
   cursor: pointer;
   border-bottom: 1px solid transparent;
   font-size: 20px;
-  color: #555;
+  color: #333;
 }
 .sidebar-nav li:hover {
   color: #f5f5f5;
@@ -1879,7 +1879,7 @@ pre .javascript .function {
 }
 .post-toc-empty {
   font-size: 18px;
-  color: #666;
+  color: #555;
 }
 .post-toc-wrap {
   overflow: hidden;
@@ -1902,12 +1902,12 @@ pre .javascript .function {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   transition-property: all;
-  color: #999;
-  border-bottom-color: #555;
+  color: #888;
+  border-bottom-color: #333;
 }
 .post-toc ol a:hover {
-  color: #ccc;
-  border-bottom-color: #ccc;
+  color: #bbb;
+  border-bottom-color: #bbb;
 }
 .post-toc .nav-item {
   overflow: hidden;
@@ -1966,7 +1966,7 @@ pre .javascript .function {
 }
 .footer {
   font-size: 14px;
-  color: #999;
+  color: #888;
 }
 .footer img {
   border: none;
@@ -2395,7 +2395,7 @@ pre .javascript .function {
   width: 10px;
   height: 10px;
   opacity: 0.5;
-  background: #555;
+  background: #333;
   border: 1px solid #fff;
   border-radius: 50%;
 }
@@ -2414,7 +2414,7 @@ pre .javascript .function {
   margin: 5px 10px;
 }
 .category-all-page .category-list-count {
-  color: #bbb;
+  color: #aaa;
 }
 .category-all-page .category-list-count:before {
   display: inline;
@@ -2620,7 +2620,7 @@ embed {
 .custom-logo .site-title {
   margin: 10px auto 0;
   font-size: 26px;
-  color: #222;
+  color: #000;
 }
 .custom-logo .site-title a {
   border: none;
@@ -2640,7 +2640,7 @@ embed {
     width: 100%;
     padding: 0;
     background: #fff;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ccc;
     z-index: 1030;
   }
 }
