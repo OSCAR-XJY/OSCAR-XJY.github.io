@@ -146,7 +146,7 @@
 <meta property="og:site_name" content="Oscar&#39;s Programming Blog">
 <meta property="og:description" content="DescriptionA prime number is a natural number greater than 1 that cannot be formed by multiplying two smaller natural numbers. A primality test is an very useful algorithm, especially in cryptography.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-05-05T08:37:54.094Z">
+<meta property="og:updated_time" content="2018-05-07T13:45:39.699Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Primality Testing">
 <meta name="twitter:description" content="DescriptionA prime number is a natural number greater than 1 that cannot be formed by multiplying two smaller natural numbers. A primality test is an very useful algorithm, especially in cryptography.">
@@ -466,10 +466,11 @@
 </tbody>
 </table>
 <p>Due to the increases of coefficient of $k$, the redundant checks caused by composite $d$ reduced. So the time consumption significantly drops. However, no matter how big the coefficient of $k$ we use, we will still encounter composite $d$, and do some redundant checks (as long as the input $n$ is big enough).</p>
-<p>Ideally, if all the $d$ we use are prime, when $n$ is big enough, Primorial Trial Method will be about $\ln \sqrt n $ times faster than Root Trial Method. If we still use the same test case $n = 56784968830078273$, this method will be about $\ln \sqrt {56784968830078273}  \approx {\rm{38} } { \rm{.58} }$ times faster, compared with Root Trial Method. Let $\pi \left( n \right)$ be the prime-counting function, we can easily prove that:</p>
+<p>Ideally, if all the $d$ we using are prime, when $n$ is really big, Primorial Trial Method will be about $\ln \sqrt n $ times faster than Root Trial Method. Let $\pi \left( n \right)$ be the prime-counting function, we can easily prove that:</p>
 <p>$$\mathop {\lim }\limits_{n \to \infty } \frac{ {\pi \left( n \right) } } { {\frac{n}{ {\ln n} } } } = 1$$</p>
 <p>$$\sqrt n /\frac{ {\sqrt n } } { {\ln \sqrt n } } = \ln \sqrt n$$</p>
-
+<p>However, if we use a larger test case $n = 8223372036854775893$, which is a little smaller than the maximal value of $long$ $long$ $int$ $(9223372036854775807)$ and reserved a margin to prevent overflow, these ${\rm O}(\sqrt n )$ algorithms still take too much time to generate answer. So other wiser algorithms are still waiting to be found and studied by us.</p>
+<h1 id="To-be-continued…-at-least-one-year…"><a href="#To-be-continued…-at-least-one-year…" class="headerlink" title="To be continued… at least one year…"></a>To be continued… at least one year…</h1>
       
     </div>
     
@@ -661,7 +662,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Naive-Trial-Method"><span class="nav-number">2.</span> <span class="nav-text">Naive Trial Method</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Root-Trial-Method"><span class="nav-number">3.</span> <span class="nav-text">Root Trial Method</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Primorial-Trial-Method"><span class="nav-number">4.</span> <span class="nav-text">Primorial Trial Method</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Naive-Trial-Method"><span class="nav-number">2.</span> <span class="nav-text">Naive Trial Method</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Root-Trial-Method"><span class="nav-number">3.</span> <span class="nav-text">Root Trial Method</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Primorial-Trial-Method"><span class="nav-number">4.</span> <span class="nav-text">Primorial Trial Method</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#To-be-continued…-at-least-one-year…"><span class="nav-number">5.</span> <span class="nav-text">To be continued… at least one year…</span></a></li></ol></div>
             
 
           </div>
