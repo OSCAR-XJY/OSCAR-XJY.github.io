@@ -127,7 +127,7 @@
 
 
 
-  <meta name="keywords" content="Sorting Techniques," />
+  <meta name="keywords" content="Comparison Sorts," />
 
 
 
@@ -138,18 +138,18 @@
 
 
 
-<meta name="description" content="DescriptionSorting algorithms are always extremely useful in both computer science and our daily life.">
-<meta name="keywords" content="Sorting Techniques">
+<meta name="description" content="DescriptionSorting algorithms are always extremely useful in both computer science and our daily life. Comparison sorts are a kind of sorting algorithms base on comparison operations. Although compari">
+<meta name="keywords" content="Comparison Sorts">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Sorting Techniques">
-<meta property="og:url" content="http://yoursite.com/2018/05/18/Sorting Techniques/index.html">
+<meta property="og:title" content="Comparison Sorts">
+<meta property="og:url" content="http://yoursite.com/2018/05/18/Comparison Sorts/index.html">
 <meta property="og:site_name" content="Oscar&#39;s Programming Blog">
-<meta property="og:description" content="DescriptionSorting algorithms are always extremely useful in both computer science and our daily life.">
+<meta property="og:description" content="DescriptionSorting algorithms are always extremely useful in both computer science and our daily life. Comparison sorts are a kind of sorting algorithms base on comparison operations. Although compari">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-09T21:05:45.012Z">
+<meta property="og:updated_time" content="2018-07-14T18:52:42.558Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sorting Techniques">
-<meta name="twitter:description" content="DescriptionSorting algorithms are always extremely useful in both computer science and our daily life.">
+<meta name="twitter:title" content="Comparison Sorts">
+<meta name="twitter:description" content="DescriptionSorting algorithms are always extremely useful in both computer science and our daily life. Comparison sorts are a kind of sorting algorithms base on comparison operations. Although compari">
 
 
 
@@ -179,13 +179,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/18/Sorting Techniques/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/18/Comparison Sorts/"/>
 
 
 
 
 
-  <title>Sorting Techniques | Oscar's Programming Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>Comparison Sorts | Oscar's Programming Blog</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -300,7 +300,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/18/Sorting Techniques/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/18/Comparison Sorts/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xu Jiayun">
@@ -317,7 +317,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Sorting Techniques</h2>
+          <h2 class="post-title" itemprop="name headline">Comparison Sorts</h2>
         
 
         <div class="post-meta">
@@ -352,8 +352,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Basic-Sorting-Algorithms/" itemprop="url" rel="index">
-                    <span itemprop="name">Basic Sorting Algorithms</span>
+                  <a href="/categories/Sorting-Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Sorting Algorithms</span>
                   </a>
                 </span>
 
@@ -389,7 +389,76 @@
       
 
       
-        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>Sorting algorithms are always extremely useful in both computer science and our daily life.<a id="more"></a> For simplicity, we will use an array $arr$ to store all the numbers, and a const $n$ to describe the size of the array.</p>
+        <h1 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h1><p>Sorting algorithms are always extremely useful in both computer science and our daily life. Comparison sorts are a kind of sorting algorithms base on comparison operations. Although comparison sorts have some limitations (like cannot perform better than ${\rm O}\left( {n\log n} \right)$ in average or worst cases), they still hold a lot of commendable features in practice, such as allowing sorting of many different datatypes and fine control over how the elements are sorted.<a id="more"></a> For simplicity, we will use an array $arr$ to store all the numbers (now we are only interested in numbers), and a const $n$ to describe the size of the array.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">Best</th>
+<th style="text-align:center">Average</th>
+<th style="text-align:center">Worst</th>
+<th style="text-align:center">Memory</th>
+<th style="text-align:center">Stable</th>
+<th style="text-align:center">In-place</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Bubble</strong></td>
+<td style="text-align:center">${\rm O}\left( n \right)$</td>
+<td style="text-align:center">${\rm O}\left( { {n^2} } \right)$</td>
+<td style="text-align:center">${\rm O}\left( { {n^2} } \right)$</td>
+<td style="text-align:center">${\rm O}\left( 1 \right)$</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">Yes</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Selection</strong></td>
+<td style="text-align:center">${\rm O}\left( { {n^2} } \right)$</td>
+<td style="text-align:center">${\rm O}\left( { {n^2} } \right)$</td>
+<td style="text-align:center">${\rm O}\left( { {n^2} } \right)$</td>
+<td style="text-align:center">${\rm O}\left( 1 \right)$</td>
+<td style="text-align:center">No</td>
+<td style="text-align:center">Yes</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Insertion</strong></td>
+<td style="text-align:center">${\rm O}\left( n \right)$</td>
+<td style="text-align:center">${\rm O}\left( { {n^2} } \right)$</td>
+<td style="text-align:center">${\rm O}\left( { {n^2} } \right)$</td>
+<td style="text-align:center">${\rm O}\left( 1 \right)$</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">Yes</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Merge</strong></td>
+<td style="text-align:center">${\rm O}\left( {n\log n} \right)$</td>
+<td style="text-align:center">${\rm O}\left( {n\log n} \right)$</td>
+<td style="text-align:center">${\rm O}\left( {n\log n} \right)$</td>
+<td style="text-align:center">${\rm O}\left( n \right)$</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">No</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Quick</strong></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">No</td>
+<td style="text-align:center">Yes</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Quick (Fat)</strong></td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">Yes</td>
+</tr>
+</tbody>
+</table>
 <h1 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a>Bubble Sort</h1><p>Bubble sort is one of the simplest sorting algorithms. It bases on the principle that compare all the adjacent elements in the array, if one element is bigger than the one after it, then swap them. So by doing this process (called a pass) once and once again, when finally swap doesn’t occur, we will gain a sorted array. Now let us find out we need to repeat this process how many times. As we can imagine, an element always flows to the next position, until it arrives at correct place (though it may take a few passes). And the larger an elements is, the earlier it will be sorted (sorted in an earlier pass). So those positions at the end of the array will be sorted first, and swap won’t occur at those places any more. Hence, in every pass, we mark the index at which the last swap occurs, and in the next pass, we only need to compare those adjacent elements before the mark. In the worst cases, the mark moves ahead one position one pass, so it takes total $n-1$ passes. But in other cases, it may be hopefully of taking fewer passes.</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubble_sort</span><span class="params">(<span class="keyword">int</span>[])</span></span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> n=<span class="number">10</span>;                                                  <span class="comment">//set arr size=10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> arr[n]=&#123;&#125;;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">                <span class="built_in">cin</span>&gt;&gt;arr[i];</span><br><span class="line">        bubble_sort(arr);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">                <span class="built_in">cout</span>&lt;&lt;arr[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubble_sort</span><span class="params">(<span class="keyword">int</span> arr[])</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len=n,mark;       <span class="comment">//at first the entire array is not sorted, set len=n</span></span><br><span class="line">        <span class="keyword">do</span>&#123;</span><br><span class="line">                mark=<span class="number">0</span>;                                               <span class="comment">//set mark=0</span></span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;len;i++)      <span class="comment">//compare adjacent elements before len</span></span><br><span class="line">                        <span class="keyword">if</span>(arr[i<span class="number">-1</span>]&gt;arr[i])&#123;</span><br><span class="line">                                swap(arr[i<span class="number">-1</span>],arr[i]);</span><br><span class="line">                                mark=i;</span><br><span class="line">                        &#125;               <span class="comment">//mark=the index at which last swap occurs</span></span><br><span class="line">                len=mark;                                        <span class="comment">//update len=mark</span></span><br><span class="line">        &#125;<span class="keyword">while</span>(mark!=<span class="number">0</span>);         <span class="comment">//if swap doesn't occur (mark keeps 0), then exit</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>The time complexity of this algorithm in best, average and worst cases are ${\rm O}\left( n \right)$, ${\rm O}\left( { {n^2} } \right)$, ${\rm O}\left( { {n^2} } \right)$ respectively. Thus it is almost impossilbe to apply this method in sorting largre arrays. Meanwhile, in worst cases, Bubble Sort requests ${\rm O}\left( { {n^2} } \right)$ swaps, which causes it slower than other sort algorithms. However, Bubble Sort is a stable algorithm, which means those elements have same value will remain their initially relative orders after we finished sorting. In-place is its another advantage, in other words, it only needs ${\rm O}\left( {\rm{1} } \right) $ auxiliary storage. Generally, Bubble Sort is slower than Selection Sort, let alone Insertion Sort.</p>
@@ -401,8 +470,22 @@
 <p>The time complexity of this algorithm in best, average and worst cases are ${\rm O}\left( n \right)$, ${\rm O}\left( { {n^2} } \right)$, ${\rm O}\left( { {n^2} } \right)$ respectively. Thus, it is impractical to use this algorithm for sorting large arrays. However, this Insertion Sort is one of the fastest algorithms for sorting very small arrays, even faster than some more advanced algorithms. Meanwhile, this is an in-place algorithm, and it only needs ${\rm O}\left( {\rm{1} } \right) $ auxiliary storage. It is also a stable algorithm. In practice, it is more efficient than Selection Sort, since when the elements in an array has almost sorted, it has much less work to do compared with Selection Sort.</p>
 <h1 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a>Merge Sort</h1><p>Merge sort is a much sophisticated sorting algorithm which can be practiced in a paradigm called divide-and-conquer. In a parallel view (human minds), we first divide the array into two smaller arrays, then divide each of the smaller array into another two even smaller arrays, and repeat this process again and again until it cannot be divided any more (all arrays contain one element only). After this, we conquer each pair of the small arrays into a larger array which has exactly the same elements from those two small arrays, but whose order has been rearranged. By repeating these conquer steps again and again, finally there will be left only one array that has the same elements compared with the original one, but who has been sorted. However, in most computers, we cannot manipulate these divide or conquer steps parallel, instead, we will achieve them one by one in a specific order.</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge_sort</span><span class="params">(<span class="keyword">int</span>[],<span class="keyword">int</span>[],<span class="keyword">int</span>,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> n=<span class="number">10</span>;                                                  <span class="comment">//set arr size=10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> arr[n]=&#123;&#125;;</span><br><span class="line">        <span class="keyword">int</span> reg[n]=&#123;&#125;;                                          <span class="comment">//deposit elements</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">                <span class="built_in">cin</span>&gt;&gt;arr[i];</span><br><span class="line">        merge_sort(arr,reg,<span class="number">0</span>,n<span class="number">-1</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">                <span class="built_in">cout</span>&lt;&lt;arr[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge_sort</span><span class="params">(<span class="keyword">int</span> arr[],<span class="keyword">int</span> reg[],<span class="keyword">int</span> head,<span class="keyword">int</span> tail)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head&gt;=tail) <span class="keyword">return</span>;            <span class="comment">//one element in the array, it is sorted</span></span><br><span class="line">        <span class="keyword">int</span> mid=(head+tail)/<span class="number">2</span>;</span><br><span class="line">        merge_sort(arr,reg,head,mid);            <span class="comment">//sort front half of head to tail</span></span><br><span class="line">        merge_sort(arr,reg,mid+<span class="number">1</span>,tail);           <span class="comment">//sort rear half of head to tail</span></span><br><span class="line">        <span class="keyword">int</span> i=head,j=mid+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k=head;k&lt;=tail;k++)     <span class="comment">//by order, copy front &amp; rear halfs to reg</span></span><br><span class="line">                reg[k]= (i&lt;=mid&amp;&amp;(j&gt;tail||arr[i]&lt;=arr[j])) ? arr[i++] : arr[j++];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k=head;k&lt;=tail;k++)              <span class="comment">//copy those elements back to arr</span></span><br><span class="line">                arr[k]=reg[k];                        <span class="comment">//now head to tail is sorted</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>The time complexity of this algorithm in best, average and worst cases are all ${\rm O}\left( {n\log n} \right)$, so it is faster than</p>
-
+<p>The time complexity of this algorithm in best, average and worst cases are all ${\rm O}\left( {n\log n} \right)$, so it is much faster than all the algorithms we mentioned above. Meanwhile, merge sort is a stable algorithm. But it is not an in-place algorithm and it needs ${\rm O}\left( n \right)$ auxiliary storage. In addition, merge sort is the best choice for sorting a linked list (in this situation it only needs ${\rm O}\left( 1 \right)$ auxiliary storage), while other algorithms (such as quicksort) perform poorly because of the slow access to a random node.</p>
+<h1 id="Quicksort"><a href="#Quicksort" class="headerlink" title="Quicksort"></a>Quicksort</h1><p>Quicksort is an efficient and commonly used sorting algorithm, which can also be practiced in the paradigm of divide-and-conquer. In a parallel view (human minds), we first choose an element within the array as a pivot (since we haven’t figure out how to choose a good pivot, we will directly set the last element as a pivot), then we rearrange the position of this pivot, and make sure left of this pivot are all elements smaller than it, while right of this pivot are all elements larger than it (called partition). After finishing this, we divide this array into two smaller arrays (leave alone the pivot). One consists of all the elements smaller than the pivot, and the other one consists of all the elements larger than the piovt. The pivot, however, has been sorted (at the right position). By repeating those steps to these two newly formed arrays parallel, it will end up with an appearance of $n$ arrays ($n$ is the number of elements to be sorted), each of them consists only one element (a pivot). So at the end we will obtain a sorted array. However, in most computers, we cannot manipulate these divide or conquer steps parallel, instead, we will achieve them one by one in a specific order.</p>
+<p>Now there are remaining three things we need to consider. First, how can we choice a better pivot to improve the occurrence rate of balanced partition sizes (Balanced Partitions). Second, how can we rearrange all the elements so that left of the pivot are all elements smaller than it, and right of the pivot are all elements larger than it (Partition Schemes). Third, how can we improve the performance of our quicksort (Farther Optimizations).</p>
+<h2 id="Balanced-Partitions"><a href="#Balanced-Partitions" class="headerlink" title="Balanced Partitions"></a>Balanced Partitions</h2><p>Sometimes, partitions may be extremely unbalanced (as long as the pivots we chosen are the smallest or largest element in the array) (or all the elements are equal, specially in in Lomuto partition). An extremely unbalanced partition is the last thing we want, and the following formulas explained this.</p>
+<p>Let  $T\left( n \right)$ be the time consumption of this algorithm. Ideally, if each time we obtain a perfectly balanced partition:</p>
+<p>$$T\left( n \right) = {\rm{O} }\left( n \right) + 2T\left( {\frac{n}{2} } \right){\rm{     } } \Rightarrow {\rm{     } }T\left( n \right) = {\rm{O} }\left( {n\log n} \right)$$</p>
+<p>However, if each time we obtain an extremely unbalanced partition:</p>
+<p>$$T\left( n \right) = {\rm{O} }\left( n \right) + T\left( {n - 1} \right){\rm{     } } \Rightarrow {\rm{     } }T\left( n \right) = {\rm{O} }\left( { {n^2} } \right)$$</p>
+<p>So, it is worthy to make more efforts, in order to improve the occurrence rate of balanced partitions.</p>
+<p><strong>Median-of-Three</strong> is a simply solution to find an approximately median as the pivot, which will lead to an approximately balanced partition. Although its partition is not so perfect, median-of-three has great advantage in speed. Unlike it takes ${\rm O}\left( n \right)$ time to find the real median for creating a perfectly balanced partition, mid-of-three only needs ${\rm O}\left( 1 \right)$ time. After testing, we find a quicksort applies median-of-three method is much faster then the one finding the real median.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> mid=(head+tail)/<span class="number">2</span>;                                   <span class="comment">//be cautious of overflow</span></span><br><span class="line"><span class="keyword">if</span>(arr[mid]&lt;arr[head]) swap(arr[head],arr[mid]);              <span class="comment">//if array size &gt;= 3</span></span><br><span class="line"><span class="keyword">if</span>(arr[tail]&lt;arr[head]) swap(arr[head],arr[tail]);     <span class="comment">//the smallest in arr[head]</span></span><br><span class="line"><span class="keyword">if</span>(arr[mid]&lt;arr[tail]) swap(arr[mid],arr[tail]);    <span class="comment">//median of three in arr[tail]</span></span><br></pre></td></tr></table></figure>
+<h2 id="Partition-Schemes"><a href="#Partition-Schemes" class="headerlink" title="Partition Schemes"></a>Partition Schemes</h2><p><strong>Lomuto Partition</strong> is detailedly mentioned in the book <em>Introduction to Algorithms</em>, and it is widely used in teaching, although it is less efficient than Hoare partition (and it performs awfully when the number of repeated elements increases).</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span>[],<span class="keyword">int</span>,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> n=<span class="number">10</span>;   <span class="comment">//set arr size=10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> arr[n]=&#123;&#125;;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">                <span class="built_in">cin</span>&gt;&gt;arr[i];</span><br><span class="line">        quicksort(arr,<span class="number">0</span>,n<span class="number">-1</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">                <span class="built_in">cout</span>&lt;&lt;arr[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> arr[],<span class="keyword">int</span> head,<span class="keyword">int</span> tail)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head&gt;=tail) <span class="keyword">return</span>;            <span class="comment">//one element in the array, it is sorted</span></span><br><span class="line">        <span class="keyword">int</span> mid=(head+tail)/<span class="number">2</span>;   <span class="comment">//set arr[tail] (pivot) to be the median of three</span></span><br><span class="line">        <span class="keyword">if</span>(arr[mid]&lt;arr[head]) swap(arr[head],arr[mid]);</span><br><span class="line">        <span class="keyword">if</span>(arr[tail]&lt;arr[head]) swap(arr[head],arr[tail]);</span><br><span class="line">        <span class="keyword">if</span>(arr[mid]&lt;arr[tail]) swap(arr[mid],arr[tail]);</span><br><span class="line">        <span class="keyword">int</span> k=head;                        <span class="comment">//partition all elements into two parts</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=head;i&lt;tail;i++)                       <span class="comment">//(leave alone the pivot)</span></span><br><span class="line">                <span class="keyword">if</span>(arr[i]&lt;arr[tail]) swap(arr[k++],arr[i]);</span><br><span class="line">        swap(arr[k],arr[tail]);                                   <span class="comment">//sort the pivot</span></span><br><span class="line">        quicksort(arr,head,k<span class="number">-1</span>);                 <span class="comment">//sort the left part of the pivot</span></span><br><span class="line">        quicksort(arr,k+<span class="number">1</span>,tail);                <span class="comment">//sort the right part of the pivot</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Hoare Partition</strong> is a much more efficient partition scheme, as it does three times fewer swaps on average (and it performs good when there are many repeated elements, even when all values are equal, it creates efficient partitions). </p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span>[],<span class="keyword">int</span>,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> n=<span class="number">10</span>;                                                  <span class="comment">//set arr size=10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> arr[n]=&#123;&#125;;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">                <span class="built_in">cin</span>&gt;&gt;arr[i];</span><br><span class="line">        quicksort(arr,<span class="number">0</span>,n<span class="number">-1</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">                <span class="built_in">cout</span>&lt;&lt;arr[i]&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> arr[],<span class="keyword">int</span> head,<span class="keyword">int</span> tail)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head&gt;=tail) <span class="keyword">return</span>;            <span class="comment">//one element in the array, it is sorted</span></span><br><span class="line">        <span class="keyword">int</span> mid=(head+tail)/<span class="number">2</span>;   <span class="comment">//set arr[tail] (pivot) to be the median of three</span></span><br><span class="line">        <span class="keyword">if</span>(arr[mid]&lt;arr[head]) swap(arr[head],arr[mid]);</span><br><span class="line">        <span class="keyword">if</span>(arr[tail]&lt;arr[head]) swap(arr[head],arr[tail]);</span><br><span class="line">        <span class="keyword">if</span>(arr[mid]&lt;arr[tail]) swap(arr[mid],arr[tail]);</span><br><span class="line">        <span class="keyword">int</span> i=head<span class="number">-1</span>,j=tail;               <span class="comment">//partition all elements into two parts</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="number">1</span>)&#123;                                        <span class="comment">//(leave alone the pivot)</span></span><br><span class="line">                <span class="keyword">do</span> i++; <span class="keyword">while</span>(arr[i]&lt;arr[tail]);</span><br><span class="line">                <span class="keyword">do</span> j--; <span class="keyword">while</span>(arr[j]&gt;arr[tail]);</span><br><span class="line">                <span class="keyword">if</span>(i&gt;=j) <span class="keyword">break</span>;</span><br><span class="line">                swap(arr[i],arr[j]);</span><br><span class="line">        &#125;</span><br><span class="line">        swap(arr[i],arr[tail]);                                   <span class="comment">//sort the pivot</span></span><br><span class="line">        quicksort(arr,head,i<span class="number">-1</span>);                 <span class="comment">//sort the left part of the pivot</span></span><br><span class="line">        quicksort(arr,i+<span class="number">1</span>,tail);                <span class="comment">//sort the right part of the pivot</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Farther-Optimizations"><a href="#Farther-Optimizations" class="headerlink" title="Farther Optimizations"></a>Farther Optimizations</h2>
       
     </div>
     
@@ -419,7 +502,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Sorting-Techniques/" rel="tag"><i class="fa fa-tag"></i> Sorting Techniques</a>
+            <a href="/tags/Comparison-Sorts/" rel="tag"><i class="fa fa-tag"></i> Comparison Sorts</a>
           
         </div>
       
@@ -598,7 +681,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bubble-Sort"><span class="nav-number">2.</span> <span class="nav-text">Bubble Sort</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Selection-Sort"><span class="nav-number">3.</span> <span class="nav-text">Selection Sort</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Insertion-Sort"><span class="nav-number">4.</span> <span class="nav-text">Insertion Sort</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Merge-Sort"><span class="nav-number">5.</span> <span class="nav-text">Merge Sort</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Description"><span class="nav-number">1.</span> <span class="nav-text">Description</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bubble-Sort"><span class="nav-number">2.</span> <span class="nav-text">Bubble Sort</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Selection-Sort"><span class="nav-number">3.</span> <span class="nav-text">Selection Sort</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Insertion-Sort"><span class="nav-number">4.</span> <span class="nav-text">Insertion Sort</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Merge-Sort"><span class="nav-number">5.</span> <span class="nav-text">Merge Sort</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Quicksort"><span class="nav-number">6.</span> <span class="nav-text">Quicksort</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Balanced-Partitions"><span class="nav-number">6.1.</span> <span class="nav-text">Balanced Partitions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Partition-Schemes"><span class="nav-number">6.2.</span> <span class="nav-text">Partition Schemes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Farther-Optimizations"><span class="nav-number">6.3.</span> <span class="nav-text">Farther Optimizations</span></a></li></ol></li></ol></div>
             
 
           </div>
